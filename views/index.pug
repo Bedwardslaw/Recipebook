@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+body
+  h1 Welcome to Recipebook 
+  form(action="/recipes/", method = "post")
+  .form-group
+    label(for='Name') Name
+    input#exampleFormControlInput1.form-control(type='text' value='recipe.name')
+  .form-group
+    label(for='Ingredients') Ingredients
+    textarea#exampleFormControlTextarea1.form-control(rows='10' value='recipe.ingredients')
+  .form-group
+    label(for='Directions') Directions 
+    textarea#exampleFormControlTextarea1.form-control(rows='10' value='recipe.directions')
+  input(type="submit")
+
+  .container
+    a.btn.btn-info(href='recipes/index' role='button') View Recipes
+    a.btn.btn-info(href='recipes/edit' role='button') Edit Recipe
+    a.btn.btn-info(href='recipes/delete' role='button') Delete Recipe

@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  div.subheader
+    h2 Recipes
+    a(href="/recipes/new", class="btn-new") Add Recipe &#43;
+    
+  each recipes in recipes
+    recipe
+      h3= recipe.name
+      p= recipe.ingredients
+      p= recipe.directions
+      a(href = "/recipes/" + recipe.id) More Recipes &rarr;

@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h2= recipe.name
+  p= recipe.ingredients
+  p= recipe.directions)
+  a(href="../") &larr; Back 
+  | | 
+  a(href="/recipes/" + recipe.id + "/edit") Edit Recipe 
+  | | 
+  a(href="/recipes/" + recipe.id + "/delete") Delete Recipe
